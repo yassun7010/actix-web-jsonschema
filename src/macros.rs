@@ -8,6 +8,13 @@ macro_rules! schema_new_type {
         #[derive(Debug)]
         pub struct $Type<T>(pub T);
 
+        impl<T> $Type<T> {
+            /// Unwrap into inner `T` value.
+            pub fn into_inner(self) -> T {
+                self.0
+            }
+        }
+
         impl<T> AsRef<T> for $Type<T> {
             fn as_ref(&self) -> &T {
                 &self.0
