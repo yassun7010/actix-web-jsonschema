@@ -1,6 +1,6 @@
 [package]
 name = "actix-web-jsonschema"
-description = "JsonSchema Validation Request/Response for Actix Web."
+description = "JsonSchema Validation Extractor for Actix Web."
 version = "1.0.0"
 edition = "2021"
 license = "MIT"

@@ -1,8 +1,10 @@
 macro_rules! schema_new_type {
     (
+        #[doc = $document:literal]
         #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
         pub struct $Type:ident<T>(pub T);
     ) => {
+        #[doc = $document]
         #[derive(Debug)]
         pub struct $Type<T>(pub T);
 
@@ -57,10 +59,12 @@ macro_rules! schema_new_type {
     };
 
     (
+        #[doc = $document:literal]
         #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest, Responder)]
         pub struct $Type:ident<T>(pub T);
     ) => {
         crate::macros::schema_new_type! {
+            #[doc = $document]
             #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
             pub struct $Type<T>(pub T);
         }

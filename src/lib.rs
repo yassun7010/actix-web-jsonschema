@@ -62,21 +62,25 @@ pub use error::Error;
 use macros::schema_new_type;
 
 schema_new_type! {
+    #[doc = "Extract typed information from the request’s path."]
     #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
     pub struct Path<T>(pub T);
 }
 
 schema_new_type! {
+    #[doc = "Extract and validate typed information from the request’s query."]
     #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
     pub struct Query<T>(pub T);
 }
 
 schema_new_type! {
+    #[doc = "Form can be used for extracting typed information and validation from request’s form data."]
     #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
     pub struct Form<T>(pub T);
 }
 
 schema_new_type! {
+    #[doc = "Json can be used for exstracting typed information and validation from request’s payload."]
     #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest, Responder)]
     pub struct Json<T>(pub T);
 }
