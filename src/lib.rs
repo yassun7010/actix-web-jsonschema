@@ -105,7 +105,6 @@ mod test {
     }
 
     #[cfg(not(feature = "validator"))]
-
     mod default_tests {
         use super::*;
 

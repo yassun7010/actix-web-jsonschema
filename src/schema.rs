@@ -29,6 +29,7 @@ mod deserialize {
         serde::de::DeserializeOwned + validator::Validate + schemars::JsonSchema + 'static
     {
     }
+
     impl<T> SchemaDeserialize for T where
         T: serde::de::DeserializeOwned + validator::Validate + schemars::JsonSchema + 'static
     {
