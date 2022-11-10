@@ -36,7 +36,7 @@
 //! use actix_web_jsonschema::Query;
 //!
 //! #[derive(Deserialize, JsonSchema, Validate)]
-//! pub struct Request {
+//! struct Request {
 //!     #[validate(length(min = 1, max = 20))]
 //!     name: String,
 //! }
@@ -111,12 +111,12 @@ mod test {
 
         #[derive(Debug, Serialize, Deserialize, JsonSchema)]
         struct Request {
-            pub name: String,
+            name: String,
         }
 
         #[derive(Debug, Serialize, JsonSchema)]
         struct Response {
-            pub name: String,
+            name: String,
         }
 
         async fn index(
@@ -196,12 +196,12 @@ mod test {
         #[derive(Debug, Serialize, Deserialize, JsonSchema, Validate)]
         struct Request {
             #[validate(length(min = 1, max = 5))]
-            pub name: String,
+            name: String,
         }
 
         #[derive(Debug, Serialize, JsonSchema)]
         struct Response {
-            pub name: String,
+            name: String,
         }
 
         async fn index(

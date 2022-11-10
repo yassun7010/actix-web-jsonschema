@@ -38,7 +38,7 @@ use validator::Validate;
 use actix_web_jsonschema::Query;
 
 #[derive(Deserialize, JsonSchema, Validate)]
-pub struct Request {
+struct Request {
     #[validate(length(min = 1, max = 20))]
     name: String,
 }
