@@ -77,16 +77,26 @@ impl SchemaContext {
                 })
             });
 
-            if let BasicOutput::Invalid(err) = schema.apply(&value).basic() {
-                Err(crate::Error::JsonSchema(err))?
-            }
-
-            let data: T = serde_json::from_value(value).map_err(crate::Error::SerdeJson)?;
-
-            #[cfg(feature = "validator")]
-            data.validate().map_err(crate::Error::Validator)?;
-
-            Ok(data)
+            SchemaContext::validate(value, schema)
         })
+    }
+
+    fn validate<T>(
+        value: serde_json::Value,
+        schema: &jsonschema::JSONSchema,
+    ) -> Result<T, crate::Error>
+    where
+        T: SchemaDeserialize,
+    {
+        if let BasicOutput::Invalid(err) = schema.apply(&value).basic() {
+            Err(crate::Error::JsonSchema(err))?
+        }
+
+        let data: T = serde_json::from_value(value).map_err(crate::Error::SerdeJson)?;
+
+        #[cfg(feature = "validator")]
+        data.validate().map_err(crate::Error::Validator)?;
+
+        Ok(data)
     }
 }
