@@ -14,6 +14,7 @@ This crate works with Cargo and can be found on [crates.io](https://crates.io/cr
 
 ```toml
 [dependencies]
+actix-web = { version = "4", features = ["macros"] }
 actix-web-jsonschema = { version = "1", features = ["validator"] }
 serde = { version = "1", features = ["derive"] }
 schemars = { version = "0.8" }
