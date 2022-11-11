@@ -8,6 +8,10 @@ repository = "https://github.com/yassun4dev/actix-web-jsonschema.git"
 authors = ["yassun4dev <yassun4dev@outlook.com>"]
 keywords = ["validation", "serde", "jsonschema", "actix-web"]
 
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
 [dependencies]
 actix-web = { version = "4", features = ["macros"] }
 futures = "0.3"
