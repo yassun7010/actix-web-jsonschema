@@ -1,4 +1,4 @@
-macro_rules! schema_new_type {
+macro_rules! jsonschema_extractor {
     (
         #[doc = $document:literal]
         #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
@@ -70,7 +70,7 @@ macro_rules! schema_new_type {
         #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest, Responder)]
         pub struct $Type:ident<T>(pub T);
     ) => {
-        crate::macros::schema_new_type! {
+        crate::macros::jsonschema_extractor! {
             #[doc = $document]
             #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
             pub struct $Type<T>(pub T);
@@ -92,4 +92,4 @@ macro_rules! schema_new_type {
     };
 }
 
-pub(crate) use schema_new_type;
+pub(crate) use jsonschema_extractor;
