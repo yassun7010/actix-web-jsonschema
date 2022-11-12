@@ -1,6 +1,6 @@
 //! [![Latest Version](https://img.shields.io/crates/v/actix-web-jsonschema.svg?color=green&style=flat-square)](https://crates.io/crates/actix-web-jsonschema)
-//! [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js?style=flat-square)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 //! [![Documentation](https://docs.rs/actix-web-jsonschema/badge.svg)](https://docs.rs/actix-web-jsonschema)
+//! [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js?style=flat-square)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 //!
 //! This crate is a Rust library for providing validation mechanism
 //! to [actix-web](https://github.com/actix/actix-web) with [jsonschema](https://github.com/Stranger6667/jsonschema-rs) crate.
