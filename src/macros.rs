@@ -10,6 +10,8 @@ macro_rules! jsonschema_extractor {
 
         impl<T> $Type<T> {
             /// Unwrap into inner `T` value.
+            ///
+            /// This method is used for Actix-Web compatibility. It is recommended to use [`trait@Into::<T>`] instead.
             pub fn into_inner(self) -> T {
                 self.0
             }
