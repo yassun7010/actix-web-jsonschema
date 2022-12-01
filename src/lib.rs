@@ -86,6 +86,27 @@ jsonschema_extractor! {
     pub struct Json<T>(pub T);
 }
 
+#[cfg(feature = "qs_query")]
+mod qs_query {
+    use super::*;
+
+    mod actix_web {
+        pub use actix_web::*;
+
+        pub mod web {
+            pub use serde_qs::actix::QsQuery;
+        }
+    }
+
+    jsonschema_extractor! {
+        #[doc = "Extract and validate typed information from the request’s query (serde_qs based)."]
+        #[derive(Debug, AsRef, Deref, DerefMut, From, FromRequest)]
+        pub struct QsQuery<T>(pub T);
+    }
+}
+#[cfg(feature = "qs_query")]
+pub use qs_query::QsQuery;
+
 #[cfg(test)]
 mod test {
     use actix_web::http::StatusCode;
