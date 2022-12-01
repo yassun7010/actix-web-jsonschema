@@ -22,12 +22,13 @@ validator = { version = "0.16", features = ["derive"] }
 ```
 
 ### Supported extractors
-| actix_web                                                                                 | actix_web_jsonschema                                                                                              |
-| :---------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| [actix_web::web::Path](https://docs.rs/actix-web/latest/actix_web/web/struct.Path.html)   | [actix_web_jsonschema::Path](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Path.html)   |
-| [actix_web::web::Query](https://docs.rs/actix-web/latest/actix_web/web/struct.Query.html) | [actix_web_jsonschema::Query](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Query.html) |
-| [actix_web::web::Form](https://docs.rs/actix-web/latest/actix_web/web/struct.Form.html)   | [actix_web_jsonschema::Form](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Form.html)   |
-| [actix_web::web::Json](https://docs.rs/actix-web/latest/actix_web/web/struct.Json.html)   | [actix_web_jsonschema::Json](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Json.html)   |
+| actix_web                                                                                      | actix_web_jsonschema                                                                                                  |
+| :--------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| [actix_web::web::Path](https://docs.rs/actix-web/latest/actix_web/web/struct.Path.html)        | [actix_web_jsonschema::Path](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Path.html)       |
+| [actix_web::web::Query](https://docs.rs/actix-web/latest/actix_web/web/struct.Query.html)      | [actix_web_jsonschema::Query](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Query.html)     |
+| [actix_web::web::Form](https://docs.rs/actix-web/latest/actix_web/web/struct.Form.html)        | [actix_web_jsonschema::Form](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Form.html)       |
+| [actix_web::web::Json](https://docs.rs/actix-web/latest/actix_web/web/struct.Json.html)        | [actix_web_jsonschema::Json](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Json.html)       |
+| [serde_qs::actix::QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) | [actix_web_jsonschema::QsQuery](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.QsQuery.html) |
 
 ### Example
 
