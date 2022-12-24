@@ -8,6 +8,7 @@
 //! More information about this crate can be found in the [crate documentation](https://docs.rs/actix-web-jsonschema).
 //!
 //! ## Installation
+//!
 //! This crate works with Cargo and can be found on [crates.io](https://crates.io/crates/actix-web-jsonschema) with a Cargo.toml like:
 //!
 //! ```toml
@@ -20,6 +21,7 @@
 //! ```
 //!
 //! ## Supported extractors
+//!
 //! | actix_web                                                                                      | actix_web_jsonschema                                                                                                  |
 //! | :--------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
 //! | [actix_web::web::Path](https://docs.rs/actix-web/latest/actix_web/web/struct.Path.html)        | [actix_web_jsonschema::Path](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Path.html)       |
@@ -27,6 +29,11 @@
 //! | [actix_web::web::Form](https://docs.rs/actix-web/latest/actix_web/web/struct.Form.html)        | [actix_web_jsonschema::Form](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Form.html)       |
 //! | [actix_web::web::Json](https://docs.rs/actix-web/latest/actix_web/web/struct.Json.html)        | [actix_web_jsonschema::Json](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Json.html)       |
 //! | [serde_qs::actix::QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) | [actix_web_jsonschema::QsQuery](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.QsQuery.html) |
+//!
+//! ## Feature Flags
+//!
+//! - `validator` - provides [validator](https://github.com/Keats/validator) validation.
+//! - `qs_query` - provides [QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) extractor.
 //!
 //! ## Example
 //!
