@@ -33,7 +33,7 @@
 //! ## Feature Flags
 //!
 //! - `validator` - provides [validator](https://github.com/Keats/validator) validation.
-//! - `qs_query` - provides [QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) extractor.
+//! - `qs_query` - provides [QsQuery](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.QsQuery.html) extractor.
 //!
 //! ## Example
 //!
