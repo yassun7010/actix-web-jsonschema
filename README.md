@@ -22,6 +22,11 @@ schemars = { version = "0.8" }
 validator = { version = "0.16", features = ["derive"] }
 ```
 
+### Feature Flags
+
+- `validator` - provides [validator](https://github.com/Keats/validator) validation.
+- `qs_query` - provides [QsQuery](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.QsQuery.html) extractor.
+
 ### Supported extractors
 
 | actix_web                                                                                      | actix_web_jsonschema                                                                                                  |
@@ -31,11 +36,6 @@ validator = { version = "0.16", features = ["derive"] }
 | [actix_web::web::Form](https://docs.rs/actix-web/latest/actix_web/web/struct.Form.html)        | [actix_web_jsonschema::Form](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Form.html)       |
 | [actix_web::web::Json](https://docs.rs/actix-web/latest/actix_web/web/struct.Json.html)        | [actix_web_jsonschema::Json](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.Json.html)       |
 | [serde_qs::actix::QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) | [actix_web_jsonschema::QsQuery](https://docs.rs/actix-web-jsonschema/latest/actix_web_jsonschema/struct.QsQuery.html) |
-
-### Feature Flags
-
-- `validator` - provides [validator](https://github.com/Keats/validator) validation.
-- `qs_query` - provides [QsQuery](https://docs.rs/serde_qs/latest/serde_qs/actix/struct.QsQuery.html) extractor.
 
 ### Example
 
